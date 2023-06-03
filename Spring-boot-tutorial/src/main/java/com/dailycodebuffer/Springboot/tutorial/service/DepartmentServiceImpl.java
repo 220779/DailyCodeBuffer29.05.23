@@ -13,6 +13,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Autowired
     private DepartmentRepository departmentRepository;
+
     @Override
     public Department saveDepartment(Department department) {
         return departmentRepository.save(department);
@@ -22,4 +23,11 @@ public class DepartmentServiceImpl implements DepartmentService {
     public List<Department> fetchDepartmentList() {
         return departmentRepository.findAll();
     }
+
+    @Override
+    public Department fetchDepartmentById(Long departmentId) {
+        return departmentRepository.findById(departmentId).get();
+    }
 }
+
+
