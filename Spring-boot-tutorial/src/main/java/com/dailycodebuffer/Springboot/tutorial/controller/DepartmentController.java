@@ -2,7 +2,6 @@ package com.dailycodebuffer.Springboot.tutorial.controller;
 
 
 import com.dailycodebuffer.Springboot.tutorial.entity.Department;
-import com.dailycodebuffer.Springboot.tutorial.repository.DepartmentRepository;
 import com.dailycodebuffer.Springboot.tutorial.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +35,13 @@ public class DepartmentController {
     public String deleteDepartmentById(@PathVariable ("id") Long departmentId) {
         departmentService.deleteDepartmentById(departmentId);
         return "Department deleted Successfully!!!";
+    }
+
+    @PutMapping("/departments/{id}")
+    public Department updateDepartment (@PathVariable ("id")  Long departmentId,
+                                        @RequestBody Department department) {
+        return   departmentService.updateDepartment(departmentId, department);
+
     }
 
 }
