@@ -1,9 +1,9 @@
-package com.dailycodebuffer.Springboot.tutorial.controller;
+package com.dailycodebuffer.controller;
 
 
-import com.dailycodebuffer.Springboot.tutorial.entity.Department;
-import com.dailycodebuffer.Springboot.tutorial.repository.DepartmentRepository;
-import com.dailycodebuffer.Springboot.tutorial.service.DepartmentService;
+import com.dailycodebuffer.entity.Department;
+import com.dailycodebuffer.repository.DepartmentRepository;
+import com.dailycodebuffer.service.DepartmentService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

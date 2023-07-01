@@ -1,8 +1,8 @@
-package com.dailycodebuffer.Springboot.tutorial.service;
+package com.dailycodebuffer.service;
 
 
-import com.dailycodebuffer.Springboot.tutorial.entity.Department;
-import com.dailycodebuffer.Springboot.tutorial.repository.DepartmentRepository;
+import com.dailycodebuffer.entity.Department;
+import com.dailycodebuffer.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

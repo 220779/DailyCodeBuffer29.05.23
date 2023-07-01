@@ -1,4 +1,4 @@
-package com.dailycodebuffer.Springboot.tutorial.controller;
+package com.dailycodebuffer.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,6 +1,6 @@
-package com.dailycodebuffer.Springboot.tutorial.service;
+package com.dailycodebuffer.service;
 
-import com.dailycodebuffer.Springboot.tutorial.entity.Department;
+import com.dailycodebuffer.entity.Department;
 
 import java.util.List;
 
