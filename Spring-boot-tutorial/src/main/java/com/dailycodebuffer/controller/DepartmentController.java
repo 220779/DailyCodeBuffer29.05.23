@@ -18,7 +18,7 @@ public class DepartmentController {
 
     @Autowired
     private DepartmentService departmentService;
-    @Autowired
+
     private DepartmentRepository departmentRepository;
 
     private final Logger LOGGER =
