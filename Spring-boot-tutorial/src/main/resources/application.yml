@@ -1,14 +1,64 @@
 server:
-  port: 8080
+  port: '8080'
+
 spring:
+  profiles:
+    active: qa
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
   datasource:
-    driver-cLass-name: com.mysql.jdbc.Driver
-    password: Helina2001
-    urL: jdbc:mysql://localhost:3306/dcbapp
+    driver-cLass-name: com.mysql.cj.jdbc.Driver
+    urL: jdbc:mysql://localhost:3306/dcbapp?useSSL=false
     username: root
+    password: Helina2001
   jpa:
     hibernate:
       ddl-auto: update
     show-sqL: 'true'
 welcome:
-  message: Welcome to Daily Code Buffer, YAML
+  message: Welcome to Daily Code Buffer, dev
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: qa
+  datasource:
+    driver-cLass-name: com.mysql.cj.jdbc.Driver
+    urL: jdbc:mysql://localhost:3306/dcbapp-qa?useSSL=false
+    username: root
+    password: Helina2001
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sqL: 'true'
+welcome:
+  message: Welcome to Daily Code Buffer, qa
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    driver-cLass-name: com.mysql.cj.jdbc.Driver
+    urL: jdbc:mysql://localhost:3306/dcbapp-prod?useSSL=false
+    username: root
+    password: Helina2001
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sqL: 'true'
+welcome:
+  message: Welcome to Daily Code Buffer, prod
+
+
+
+
+
+
