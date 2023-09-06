@@ -1,15 +1,9 @@
 server:
-  port: '8082'
+  port: '8080'
 
 spring:
   profiles:
-    active: prod
-
-#    management:
-#      endpoints:
-#        web:
-#          exposure:
-#            include: "*"
+    active: qa
 ---
 spring:
   config:
@@ -45,6 +39,12 @@ spring:
 welcome:
   message: Welcome to Daily Code Buffer, qa
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
 
 ---
 
@@ -64,6 +64,11 @@ spring:
 welcome:
   message: Welcome to Daily Code Buffer, prod
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 
 
